@@ -1,15 +1,15 @@
 import React from 'react';
+import data from './data.json'
 import logo from './logo.svg';
 import './App.css';
-import SearchBar from './SearchBar';
-import ProductTable from'./ProductTable';
+import FiltreableProductTable from './FiltreableProductTable';
 
-function App() {
+
+
+function App(props) {
   return (
     <div className="App">
-      <h1>IRON Store</h1>
-      <SearchBar />
-      <ProductTable/>
+      <FiltreableProductTable products={data.data} />
     </div>
   );
 }
