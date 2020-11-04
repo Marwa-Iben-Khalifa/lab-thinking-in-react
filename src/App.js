@@ -4,12 +4,12 @@ import logo from './logo.svg';
 import './App.css';
 import FiltreableProductTable from './FiltreableProductTable';
 
-
+const value='';
 
 function App(props) {
   return (
     <div className="App">
-      <FiltreableProductTable products={data.data} />
+      <FiltreableProductTable products={data.data} value={value} />
     </div>
   );
 }

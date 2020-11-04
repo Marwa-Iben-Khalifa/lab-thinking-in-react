@@ -1,6 +1,8 @@
 import React from 'react';
 
-const SearchBar= (props)=>{
+class SearchBar extends React.Component{ 
+    
+    render(){
     return (
         <div  className="searchBar">
           <input
@@ -8,12 +10,12 @@ const SearchBar= (props)=>{
               class="input search-bar"
               name="search"
               placeholder="Search"
-            //   value={}
-            //   onChange={}
+              value={this.props.value}
+              onChange={this.props.toto}
           />
         </div>
     )
-}
+}}
 
 
 

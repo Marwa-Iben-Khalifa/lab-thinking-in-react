@@ -3,12 +3,13 @@ import ProductRow from './ProductRow'
 
 class ProductTable extends React.Component{
     state={
-        products: this.props.products
+        products: this.props.products,
+        category: this.props.toty
     }
     
-    
-    
+     
     render(){
+        
         console.log(this.state)
         return(
             <div>
@@ -21,7 +22,7 @@ class ProductTable extends React.Component{
                     </thead>
                     <tbody>
                       {this.state.products.map((product)=>(
-                        <ProductRow name={product.name} price={product.price} stocked={product.stocked}/>
+                        product.name.includes(this.props.value) &&<ProductRow name={product.name} price={product.price} stocked={product.stocked}/>
                         ))}  
                     </tbody>
                 </table>
