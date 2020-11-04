@@ -3,7 +3,6 @@ import ProductRow from './ProductRow'
 
 class ProductTable extends React.Component{
     state={
-        products: this.props.products,
         category: this.props.toty
     }
     
@@ -13,7 +12,7 @@ class ProductTable extends React.Component{
         console.log(this.state)
         return(
             <div>
-                <table>
+                <table className="table is-hoverable ">
                     <thead>
                         <tr>
                             <th> Name </th>
@@ -21,8 +20,8 @@ class ProductTable extends React.Component{
                         </tr>
                     </thead>
                     <tbody>
-                      {this.state.products.map((product)=>(
-                        product.name.includes(this.props.value) &&<ProductRow name={product.name} price={product.price} stocked={product.stocked}/>
+                      {this.props.products.map((product)=>(
+                        product.name.includes(this.props.value) &&<ProductRow name={product.name} price={product.price} stocked={product.stocked} isChecked={this.props.isChecked}/>
                         ))}  
                     </tbody>
                 </table>

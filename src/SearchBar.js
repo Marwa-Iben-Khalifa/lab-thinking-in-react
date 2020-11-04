@@ -2,9 +2,10 @@ import React from 'react';
 
 class SearchBar extends React.Component{ 
     
+    
     render(){
     return (
-        <div  className="searchBar">
+        <div  className="input is-rounded">
           <input
               type="text"
               class="input search-bar"
